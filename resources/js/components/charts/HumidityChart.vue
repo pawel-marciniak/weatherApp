@@ -30,8 +30,20 @@
                             scaleLabel: {
                                 display: true,
                                 labelString: 'Humidity'
+                            },
+                            ticks: {
+                                callback: function(value, index, values) {
+                                    return value + '%';
+                                }
                             }
                         }]
+                    },
+                    tooltips: {
+                        callbacks: {
+                            label: function(tooltipItem, data) {
+                                return tooltipItem.value + '%';
+                            }
+                        }
                     },
                     plugins: {
                         zoom: {
@@ -40,6 +52,7 @@
                                 // Boolean to enable panning
                                 enabled: true,
                                 mode: 'xy',
+                                speed: 10,
                             },
 
                             // Container for zoom options

@@ -30,8 +30,20 @@
                             scaleLabel: {
                                 display: true,
                                 labelString: 'Pressure'
+                            },
+                            ticks: {
+                                callback: function(value, index, values) {
+                                    return value + ' hPa';
+                                }
                             }
                         }]
+                    },
+                    tooltips: {
+                        callbacks: {
+                            label: function(tooltipItem, data) {
+                                return tooltipItem.value + ' hPa';
+                            }
+                        }
                     },
                     plugins: {
                         zoom: {
