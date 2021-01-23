@@ -21,3 +21,7 @@ php artisan key:generate
 Fill OPEN_WEATHER_API_KEY in .env file with OpenWeatherMap API Key.
 
 Database is not needed.
+
+## Demo access
+
+Deployed application is temporarily available under address http://139.59.213.101.
