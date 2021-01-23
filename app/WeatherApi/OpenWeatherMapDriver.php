@@ -54,7 +54,7 @@ class OpenWeatherMapDriver implements WeatherDriver
      */
     protected function fetchData(string $cityName, string $units = 'imperial'): object
     {
-        $response = Http::get('api.openweathermap.org/data/2.5/forecast', [
+        $response = Http::get('https://api.openweathermap.org/data/2.5/forecast', [
             'q' => $cityName,
             'units' => $units,
             'appid' => config('weather-api.connections.openWeatherMap.api_key'),
